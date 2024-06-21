@@ -8,19 +8,19 @@ export const Paginas = [
     {
         nombre : "fonts Google",
         categoria : "icons",
-        imagen : "./og-image.png",
+        imagen : "./fontgoogle.jpg",
         url : "https://fonts.google.com/icons"
     },
     {
         nombre : "simple Icons",
         categoria : "icons",
-        imagen : "./og-image.png",
+        imagen : "./simpleicons.png",
         url : "https://fonts.google.com/icons"
     },
     {
         nombre : "svgRepo",
         categoria : "icons",
-        imagen : "./og-image.png",
+        imagen : "./svgrepo.png",
         url : "https://fonts.google.com/icons"
     }
 ]
