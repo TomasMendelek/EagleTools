@@ -1,0 +1,32 @@
+---
+export interface props{
+    nombre: string;
+    categoria: string;
+    imagen: string;
+    url : string
+}
+const {nombre, categoria, imagen, url } = Astro.props
+---
+
+<div class="card">
+    <a href={url} >
+        <img src={imagen} alt={nombre} />
+        <h1>{nombre}</h1>
+    </a>
+</div>
+<style>
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 16px;
+      margin: 16px;
+      text-align: center;
+      width: 200px;
+      display: inline-block;
+    }
+    .card img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+

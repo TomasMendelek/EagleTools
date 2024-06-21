@@ -1,7 +1,25 @@
 ---
+import SideBar from '../components/SideBar.astro';
 import Layout from '../layouts/Layout.astro';
+import Cards from '../components/Cards.astro';
+import { Paginas } from '../data/Pags'
 ---
 
 <Layout title="Eagle UI">
-	<h1></h1>
+	<main class="flex flex-col">
+		<aside>
+			<SideBar />
+		</aside>
+		<div>
+			{Paginas.map (Paginas => (
+				<Cards
+				nombre = {Paginas.nombre}
+				categoria = {Paginas.categoria}
+				imagen = {Paginas.imagen} 
+				url = {Paginas.url}
+				/>
+			))}
+		</div>
+
+	</main>
 </Layout>
