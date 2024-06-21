@@ -7,26 +7,12 @@ export interface props{
 }
 const {nombre, categoria, imagen, url } = Astro.props
 ---
-
-<div class="card">
-    <a href={url} >
-        <img src={imagen} alt={nombre} />
-        <h1>{nombre}</h1>
+ 
+<div class="flex justify-between rounded-xl max-h-60 max-w-80 min-w-70 border-2 text-center" >
+    <a href={url} class="" >
+        <img src={imagen} alt={nombre} class="rounded-lg" />
+        <h1 class="text-2xl mt-3">{nombre}</h1>
     </a>
 </div>
-<style>
-    .card {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 16px;
-      margin: 16px;
-      text-align: center;
-      width: 200px;
-      display: inline-block;
-    }
-    .card img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
+
 
