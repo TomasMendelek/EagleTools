@@ -3,16 +3,32 @@ export interface props{
     nombre: string;
     categoria: string;
     imagen: string;
-    url : string
+    url : string;
+    iconcategoria : string;
 }
-const {nombre, categoria, imagen, url } = Astro.props
+const {nombre, iconcategoria, imagen, url, categoria } = Astro.props
 ---
- 
-<div class="flex justify-between rounded-xl max-h-60 max-w-80 min-w-70 border-2 text-center" >
-    <a href={url} class="" >
-        <img src={imagen} alt={nombre} class="rounded-lg" />
-        <h1 class="text-2xl mt-3">{nombre}</h1>
-    </a>
-</div>
+<a href={url} class="border-solid w-full rounded-lg rounded-b-2xl shadow-md overflow-hidden duration-300 hover:shadow-xl relative hover:scale-105 transition-transform">
+  <img src={imagen} alt={nombre} class="w-full h-48 object-cover object-center hover:scale-105 transition-transform" />
+  <div class=" p-1 footercard absolute -bottom-1 left-0 right-0 rounded-t-xl flex flex-col items-center ">  
+    <h2 class="text-xl text-left font-bold text-white py-1 px-4">{nombre}</h2>
+  <div class="flex flex-row text">
+    <h5>{categoria}</h5>
+    <i class={iconcategoria}></i>
+  </div>
+  </div>
+</a>
+  
+<style>
+  i{
+    color:#c22466;
+    font-size: 26px;
+    padding: 1px;
+    }
+  .footercard{
+    background-color:#160921;
+    border: #160921 solid 2px;
+  }
+</style>
 
 
