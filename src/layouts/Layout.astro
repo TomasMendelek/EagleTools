@@ -1,4 +1,5 @@
 ---
+import SideBar from '../components/SideBar.astro';
 interface Props {
 	title: string;
 }
@@ -17,7 +18,12 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<main class="flex flex-row">
+			<nav>
+				<SideBar />
+			</nav>
+			<slot />
+		</main>
 	</body>
 </html>
 <style is:global>
