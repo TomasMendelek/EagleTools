@@ -12,6 +12,7 @@ export default {
 			'text': '#eae9fc',
 			"white": "white",
 			"grey": "grey",
+			"lightgrey": "lightgrey",
 			"black":"black",
 			"blackop": "#000000a4"
 		  },
