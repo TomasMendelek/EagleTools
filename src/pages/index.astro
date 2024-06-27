@@ -1,26 +1,13 @@
 ---
-import SideBar from '../components/SideBar.astro';
-import Layout from '../layouts/Layout.astro';
-import Cards from '../components/Cards.astro';
-import { Paginas } from '../data/Pags'
+import CardsPresentacion from '../components/CardsPresentacion.astro';
+import Layout from '../layouts/LayoutIndex.astro';
+
+
 ---
-
 <Layout title="Eagle Tools">
-	<section class="flex flex-row">
-		<div class= " grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 auto-rows-max  gap-4 my-24 mx-16">
-			{Paginas.map (Paginas => (
-				<Cards
-				nombre = {Paginas.nombre}
-				categoria = {Paginas.categoria}
-				imagen = {Paginas.imagen} 
-				url = {Paginas.url}
-				iconcategoria = {Paginas.iconcategoria}
-				/>
-			))}
-		</div>
+	<section class="flex flex-col max-w-lg justify-center items-center m-auto my-20">
+		<img class="w-64" src="eagle-tools-logo-1.png" alt="Logotipo Eagle Tools">
+		<h1 class=" text-5xl font-black py-2 text-white">Eagle Tools</h1>
 	</section>
+	<CardsPresentacion />
 </Layout>
-
-<style>
-	
-</style>
