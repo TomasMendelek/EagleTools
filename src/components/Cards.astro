@@ -8,11 +8,11 @@ export interface props{
 }
 const {nombre, iconcategoria, imagen, url, categoria } = Astro.props
 ---
-<a href={url} class="border-2 border-primary w-full rounded-lg rounded-b-2xl shadow-md overflow-hidden duration-300 hover:shadow-xl relative hover:scale-105 transition-transform">
+<a href={url} class="border-2 border-primary w-full rounded-lg rounded-b-2xl shadow-md overflow-hidden duration-200 hover:shadow-xl relative hover:scale-105  transition-transform">
   <img src={imagen} alt={nombre} class="w-full h-48 object-cover object-center hover:scale-105 transition-transform" />
   <div class=" p-1 footercard absolute -bottom-1 left-0 right-0 rounded-t-xl flex flex-col text-center ">  
     <h2 class="text-xl text-center font-bold text-white px-4">{nombre}</h2>
-    <p class="text-pink-500 font-extralight ">{categoria}</p>
+    <p class="text-pink-500 font-thin ">{categoria}</p>
   </div>
 </a>
   
